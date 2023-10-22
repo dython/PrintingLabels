@@ -38,10 +38,18 @@ Right label design:
 [locationName]
 ```
 ### Prerequisites:
-For this approach, you'll need to design two distinct labels, each on its dedicated sheet. The design process is WYSIWYG, implying that you should leverage installed fonts and graphic tools to craft your labels.
+
+You need to design two distinct labels, each on its separate worksheet in Excel.
+The design is WYSIWYG (What You See Is What You Get), meaning the labels will look in the printed form exactly how they appear on the screen.
+This design process allows for using any installed fonts and graphic tools available to you.
+You will need to install a barcode font to display the barcode on the sheet. Although there are many free barcode fonts available on the web, the recommended one for this purpose is "IDAutomationHC39M". You can download it from this link.
+https://www.idautomation.com/free-barcode-products/code39-font/
 
 ### Procedure:
-VBA will retrieve label data along with the directional information for the arrow. Upon fetching this data, it will update the labels on the respective dedicated sheets. Once updated, the labels will be sent to the printer for printing.
+
+Using VBA (Visual Basic for Applications), the code will fetch the data for the labels. This data also includes directional information for an arrow.
+After retrieving the data, VBA will update the labels located on the dedicated worksheets.
+Once the labels are updated with the correct data, they will be sent directly to a printer to be printed out.
 
 
 ## Program Concept: Network Connection
