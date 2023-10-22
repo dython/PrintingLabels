@@ -38,10 +38,11 @@ VBA will retrieve label data along with the directional information for the arro
 Before implementing this method, begin by crafting a label design using any available off-the-shelf application. An essential step in this process is to input custom descriptions for each data segment of the label. To illustrate, if your requirements include a location name, a barcode denoting the location, and a directional arrow, two design formats should be created, termed left_label.lbl and right_label.lbl. Here's a representation of what left_label.lbl might look like:
 
 ### Barcode Design Example:
+```
 <<<<<<<
 [locationBarcode]
 [locationName]
-
+```
 Once your design is ready, produce a printed version to assess its quality. If the design meets your specifications, proceed to print the label to a file. Within the print dialog, select the 'print to file' option. This will generate a file with a distinctive extension, but its core content remains plain text. In my experience using ZebraDesigner, the saved file had a .prn extension. Opening this file with a standard text editor will reveal a mix of unusual characters. However, the data segments can be discerned easily. In above example case, you can find [locationBarcode] and [locationName] in the file.  The role of VBA in this setup is to identify and modify these data segments within the file before relaying it to the printer. Most of the remaining content is written in ZPL (Zebra Printer Language), guiding the label's formatting.
 
 A noteworthy aspect of this method is the use of FTP for dispatching the print file. Network printers typically house a rudimentary FTP server. Transmitting a file to this FTP server enables the printer to manage the subsequent steps – both printing the label and deleting the file post-print.
