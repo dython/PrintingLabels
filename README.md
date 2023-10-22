@@ -24,7 +24,7 @@ For printers equipped with a LAN port, it's advisable to opt for a network conne
 
 
 ## Program Concept: USB Connection
-For clarification purposes, let me outline my instructional challenge. Imagine we need to create two label formats, each displaying an arrow pointing either left or right at the top. Here are the examples:
+For clarification purposes, imagine we need to create two label formats, each displaying an arrow pointing either left or right at the top. Here are the examples:
 ```
 Left lable design:
 <<<<<<<
