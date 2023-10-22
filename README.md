@@ -12,32 +12,32 @@ The drawback to this method lies in the post-printing phase: each label needs to
 This challenge inspired the creation of a VBA solution, which I'm excited to share. By leveraging the flexibility and power of VBA, this code bridges the gap, facilitating the efficient and accurate printing of labels tailored to specific needs.
 
 
-Printing Method: USB vs. Network
+## Printing Method: USB vs. Network
 When deciding on a printing method, the two primary options available are USB and Network connections.
 
-USB Connection:
+### USB Connection:
 If your printer is connected via USB, you will typically rely on the Windows printer driver. One notable limitation of USB connections is the necessity to have a barcode font installed on your PC. This results in the barcode being printed as a bitmap, which can slow down the printing process and produce a barcode with lower resolution.
 
-Network Connection:
+### Network Connection:
 For printers equipped with a LAN port, it's advisable to opt for a network connection. Connecting via LAN offers enhanced flexibility, superior to that of USB in multiple aspects. The primary advantage lies in the speed of printing. Furthermore, a network connection allows the utilization of the printer's built-in fonts, ensuring high-resolution outputs. This is especially beneficial for barcodes, as it yields clearer and more precise scans.
 
 
 
-Program Concept: USB Connection
+## Program Concept: USB Connection
 
-Prerequisites:
+### Prerequisites:
 For this approach, you'll need to design two distinct labels, each on its dedicated sheet. The design process is WYSIWYG, implying that you should leverage installed fonts and graphic tools to craft your labels.
 
-Procedure:
+### Procedure:
 VBA will retrieve label data along with the directional information for the arrow. Upon fetching this data, it will update the labels on the respective dedicated sheets. Once updated, the labels will be sent to the printer for printing.
 
 
-Program Concept: Network Connection
+## Program Concept: Network Connection
 
-Prerequisites:
+### Prerequisites:
 Before implementing this method, begin by crafting a label design using any available off-the-shelf application. An essential step in this process is to input custom descriptions for each data segment of the label. To illustrate, if your requirements include a location name, a barcode denoting the location, and a directional arrow, two design formats should be created, termed left_label.lbl and right_label.lbl. Here's a representation of what left_label.lbl might look like:
 
-Barcode Design Example:
+### Barcode Design Example:
 <<<<<<<
 [locationBarcode]
 [locationName]
