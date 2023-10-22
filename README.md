@@ -1,5 +1,5 @@
 # PrintingLabels
- Enhancing Label Printing Efficiency with VBA
+## Enhancing Label Printing Efficiency with VBA
 
 In today's market, a plethora of label printing software offers a combination of GUI design, editing, and printing functions. Notable among these is ZebraDesigner, which often accompanies the printer upon purchase and generally meets many user needs.
 
